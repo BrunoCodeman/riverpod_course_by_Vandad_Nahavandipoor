@@ -10,9 +10,16 @@ class FirstExample extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final date = ref.watch(currentDate);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("First Example"),
+        title: const Text("First Example - Hooks Riverpod"),
+      ),
+      body: Center(
+        child: Text(
+          date.toIso8601String(),
+          style: Theme.of(context).textTheme.headlineLarge,
+        ),
       ),
     );
   }
