@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_course/first_example.dart';
+import 'package:riverpod_course/third_example.dart';
 
 import 'second_example.dart';
 
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
       ),
       home:
           //const FirstExample(),
-          const SecondExample(),
+          //const SecondExample(),
+          const ThirdExample(),
     );
   }
 }
