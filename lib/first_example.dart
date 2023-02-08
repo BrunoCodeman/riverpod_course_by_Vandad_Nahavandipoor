@@ -13,7 +13,7 @@ class FirstExample extends ConsumerWidget {
     final date = ref.watch(currentDate);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("First Example - Hooks Riverpod"),
+        title: const Text("First Example - Simple provider"),
       ),
       body: Center(
         child: Text(
