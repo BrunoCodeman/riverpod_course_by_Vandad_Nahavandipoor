@@ -32,6 +32,9 @@ final currentCityProvider = StateProvider<City?>(
   (ref) => null,
 );
 
+/// This example uses a FutureProvider to watch a StateProvider.
+/// Whenever the city changes on StateProvider, FutureProvider will return
+///the weather of that city.
 class ThirdExample extends ConsumerWidget {
   const ThirdExample({super.key});
 
