@@ -21,6 +21,10 @@ final provider = StateNotifierProvider<Counter, int?>(
   (ref) => Counter(null),
 );
 
+/// This example shows how to use StateNotifier and StateNotifier provider.
+/// The onPressed method of TextButton updates the state, while the Consumer widget
+/// wrapped around the Center widget watches these changes in the state and updates
+/// only this part of the widget tree when State changes.
 class SecondExample extends ConsumerWidget {
   const SecondExample({super.key});
   @override
