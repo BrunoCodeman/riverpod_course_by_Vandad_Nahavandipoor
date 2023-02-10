@@ -30,16 +30,16 @@ class FourthExample extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final names = ref.watch(namesProvider);
+    final namesWatch = ref.watch(namesProvider);
     return Scaffold(
       appBar: AppBar(
         title: const Text("Fourth Example - StreamProvider"),
       ),
-      body: names.when(
-          data: (names) => ListView.builder(
-              itemCount: names.length,
+      body: namesWatch.when(
+          data: (peopleNames) => ListView.builder(
+              itemCount: peopleNames.length,
               itemBuilder: (context, index) => ListTile(
-                    title: Text(names.elementAt(index)),
+                    title: Text(peopleNames.elementAt(index)),
                   )),
           error: (error, stackTrace) => const Text("End of the list"),
           loading: () => const Padding(
